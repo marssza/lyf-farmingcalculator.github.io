@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi No Hoshi - Lightyear Frontier crop rotation calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+  <h1>Hi No Hoshi - Lightyear Frontier crop rotation calculator</h1>
+  
+  <div class="controls">
+    <sl-input label="Field Count" type="number" id="fields" min="1" max="20" value="5" style="width: 120px;"></sl-input>
+    <sl-checkbox id="high" checked>High Yield</sl-checkbox>
+    <sl-checkbox id="mutated" checked>Mutated Yield</sl-checkbox>
+    <sl-button id="generate" variant="primary">Generate Rotation</sl-button>
+  </div>
+
+  <div id="error">❌ Too many cycles — cannot generate a valid rotation in 10 cycles!</div>
+
+  <sl-tab-group>
+    <sl-tab slot="nav" panel="table">🌾 Rotation Table</sl-tab>
+    <sl-tab slot="nav" panel="checklist">✅ Checklist</sl-tab>
+  
+    <sl-tab-panel name="table">
+      <div id="output"></div>
+    </sl-tab-panel>
+  
+    <sl-tab-panel name="checklist">
+      <div id="checklist"></div>
+    </sl-tab-panel>
+  </sl-tab-group>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
