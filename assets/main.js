@@ -5,8 +5,8 @@ document.getElementById('generate').addEventListener('click', () => {
 
   const settings = { fields, wantHighYield, wantMutatedYield };
 
-  if (fields < 2 || fields > 20) {
-    alert("Field count must be between 6 and 20.");
+  if (fields < 2 || fields > 15) {
+    alert("Field count must be between 2 and 15.");
     return;
   }
 
